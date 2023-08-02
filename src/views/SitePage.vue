@@ -15,19 +15,20 @@
 
     <div class="container mt-5">
       <div class="row">
-        <div class="col">
+        <div class="col-12 col-md-6">
           <div class="emphasis">
             <h4 class="text-primary text-center">
-              Discover the advantages of using Company 360 to manage your business!
+              Discover the advantages of using Company 360 to manage your
+              business!
             </h4>
           </div>
         </div>
-        <div class="col">
+        <div class="col-12 col-md-6">
           <p class="text-center">Sign up and watch our demo</p>
           <div class="card">
             <div class="card-body">
               <div class="mb-3">
-                <input type="text" class="form-control" placeholder="Nome" />
+                <input type="text" class="form-control" placeholder="Name" />
               </div>
               <div class="mb-3">
                 <input type="email" class="form-control" placeholder="E-mail" />
