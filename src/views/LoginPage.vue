@@ -28,13 +28,25 @@
                 placeholder="Password"
               />
             </div>
-            <button class="btn btn-primary">Sign in</button>
+            <button class="btn btn-primary" @click="goTo">Sign in</button>
           </div>
         </div>
       </div>
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  name: 'LoginPage',
+  methods: {
+    goTo() {
+      // $router methods: push, replace, forward, back and go
+      this.$router.push('/home')
+    }
+  }
+}
+</script>
 
 <style scoped>
 .top-menu {
