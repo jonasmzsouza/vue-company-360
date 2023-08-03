@@ -38,14 +38,14 @@
 
 <script>
 export default {
-  name: 'LoginPage',
+  name: "LoginPage",
   methods: {
     goTo() {
       // $router methods: push, replace, forward, back and go
-      this.$router.push('/home')
-    }
-  }
-}
+      this.$router.push("/home");
+    },
+  },
+};
 </script>
 
 <style scoped>
