@@ -15,8 +15,32 @@
 
     <div class="d-flex">
       <div class="list-group left-menu">
-        <a class="list-group-item list-group-item-action" href="#"
-          ><i class="bi bi-speedometer2"></i> Dashboard</a
+        <router-link class="list-group-item list-group-item-action" to="/home">
+          <i class="bi bi-speedometer2"></i> Dashboard</router-link
+        >
+        <router-link
+          class="list-group-item list-group-item-action"
+          to="/home/sales"
+        >
+          <i class="bi bi-cart"></i> Sales</router-link
+        >
+        <router-link
+          class="list-group-item list-group-item-action"
+          to="/home/sales/leads"
+        >
+          <i class="bi bi-caret-right"></i> Leads</router-link
+        >
+        <router-link
+          class="list-group-item list-group-item-action"
+          to="/home/sales/contracts"
+        >
+          <i class="bi bi-caret-right"></i> Contracts</router-link
+        >
+        <router-link
+          class="list-group-item list-group-item-action"
+          to="/home/products"
+        >
+          <i class="bi bi-box-seam"></i> Products</router-link
         >
       </div>
 
@@ -30,8 +54,7 @@
         </nav>
 
         <div class="container-fluid">
-          <h1 class="mt-4">Views related to the menu</h1>
-          <p>Here we can present the views according to the menu options.</p>
+          <router-view></router-view>
         </div>
       </div>
     </div>
