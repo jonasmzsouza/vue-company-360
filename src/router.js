@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from "vue-router";
 import HomePage from "@/views/HomePage.vue";
 import LoginPage from "@/views/LoginPage.vue";
 import SitePage from "@/views/SitePage.vue";
+import DashboardComponent from "@/components/dashboard/DashboardComponent.vue";
 import SalesComponent from "@/components/sales/SalesComponent.vue";
 import LeadsComponents from "@/components/sales/LeadsComponents.vue";
 import ContractsComponents from "@/components/sales/ContractsComponents.vue";
@@ -16,6 +17,10 @@ const routes = [
     path: "/home",
     component: HomePage,
     children: [
+      {
+        path: "dashboard",
+        component: DashboardComponent,
+      },
       {
         path: "sales",
         component: SalesComponent,
