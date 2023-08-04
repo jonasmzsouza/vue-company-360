@@ -15,30 +15,38 @@
 
     <div class="d-flex">
       <div class="list-group left-menu">
-        <router-link class="list-group-item list-group-item-action" to="/home">
+        <router-link
+          class="list-group-item list-group-item-action"
+          to="/home"
+          exact-active-class="active"
+        >
           <i class="bi bi-speedometer2"></i> Dashboard</router-link
         >
         <router-link
           class="list-group-item list-group-item-action"
           to="/home/sales"
+          exact-active-class="active"
         >
           <i class="bi bi-cart"></i> Sales</router-link
         >
         <router-link
           class="list-group-item list-group-item-action"
           to="/home/sales/leads"
+          exact-active-class="active"
         >
           <i class="bi bi-caret-right"></i> Leads</router-link
         >
         <router-link
           class="list-group-item list-group-item-action"
           to="/home/sales/contracts"
+          exact-active-class="active"
         >
           <i class="bi bi-caret-right"></i> Contracts</router-link
         >
         <router-link
           class="list-group-item list-group-item-action"
           to="/home/products"
+          exact-active-class="active"
         >
           <i class="bi bi-box-seam"></i> Products</router-link
         >
@@ -81,4 +89,10 @@ export default {
   border-top: none;
   border-right: none;
 }
+
+/* .router-link-exact-active {
+  color: #fff;
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+} */
 </style>
