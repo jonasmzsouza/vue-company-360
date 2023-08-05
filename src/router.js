@@ -4,7 +4,8 @@ import LoginPage from "@/views/LoginPage.vue";
 import SitePage from "@/views/SitePage.vue";
 import DashboardComponent from "@/components/dashboard/DashboardComponent.vue";
 import SalesComponent from "@/components/sales/SalesComponent.vue";
-import LeadsComponents from "@/components/sales/LeadsComponents.vue";
+import LeadsComponent from "@/components/sales/LeadsComponent.vue";
+import LeadComponent from "@/components/sales/LeadComponent.vue";
 import ContractsComponents from "@/components/sales/ContractsComponents.vue";
 import ProductsComponent from "@/components/products/ProductsComponent.vue";
 
@@ -27,7 +28,11 @@ const routes = [
         children: [
           {
             path: "leads",
-            component: LeadsComponents,
+            component: LeadsComponent,
+          },
+          {
+            path: "leads/:id",
+            component: LeadComponent,
           },
           {
             path: "contracts",

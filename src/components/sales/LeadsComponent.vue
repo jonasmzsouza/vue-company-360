@@ -18,7 +18,7 @@
             <td>{{ lead.phone }}</td>
             <td>
               <router-link
-                to="/home/sales/leads"
+                :to="`/home/sales/leads/${lead.id}`"
                 class="btn btn-sm btn-primary"
               >
                 <i class="bi bi-pencil-square" style="cursor: pointer"></i>
