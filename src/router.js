@@ -4,6 +4,7 @@ import LoginPage from "@/views/LoginPage.vue";
 import SitePage from "@/views/SitePage.vue";
 import DashboardComponent from "@/components/dashboard/DashboardComponent.vue";
 import SalesComponent from "@/components/sales/SalesComponent.vue";
+import SalesDefault from "@/components/sales/SalesDefault.vue";
 import LeadsComponent from "@/components/sales/LeadsComponent.vue";
 import LeadComponent from "@/components/sales/LeadComponent.vue";
 import ContractsComponents from "@/components/sales/ContractsComponents.vue";
@@ -27,22 +28,30 @@ const routes = [
         component: SalesComponent,
         children: [
           {
+            path: "",
+            component: SalesDefault,
+          },
+          {
             path: "leads",
             component: LeadsComponent,
+            name: "leads",
           },
           {
             path: "leads/:id",
             component: LeadComponent,
+            name: "lead",
           },
           {
             path: "contracts",
             component: ContractsComponents,
+            name: "contracts",
           },
         ],
       },
       {
         path: "products",
         component: ProductsComponent,
+        name: "products",
       },
     ],
   },

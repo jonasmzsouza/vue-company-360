@@ -31,21 +31,21 @@
         >
         <router-link
           class="list-group-item list-group-item-action"
-          to="/home/sales/leads"
+          :to="{ name: 'leads' }"
           exact-active-class="active"
         >
           <i class="bi bi-caret-right"></i> Leads</router-link
         >
         <router-link
           class="list-group-item list-group-item-action"
-          to="/home/sales/contracts"
+          :to="{ name: 'contracts' }"
           exact-active-class="active"
         >
           <i class="bi bi-caret-right"></i> Contracts</router-link
         >
         <router-link
           class="list-group-item list-group-item-action"
-          to="/home/products"
+          :to="{ name: 'products' }"
           exact-active-class="active"
         >
           <i class="bi bi-box-seam"></i> Products</router-link

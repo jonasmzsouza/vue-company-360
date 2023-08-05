@@ -27,7 +27,14 @@
       </div>
     </div>
 
-    <div class="col-auto">
+    <div class="col-auto d-flex justify-content-between">
+      <button
+        type="button"
+        class="btn btn-warning"
+        @click="$router.push({ name: 'leads' })"
+      >
+        Return
+      </button>
       <button type="button" class="btn btn-primary">Update</button>
     </div>
   </div>
