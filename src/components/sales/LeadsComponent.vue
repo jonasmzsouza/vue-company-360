@@ -12,13 +12,13 @@
           </tr>
         </thead>
         <tbody>
-          <tr v-for="lead in leads" :key="lead.id">
-            <td>{{ lead.id }}</td>
-            <td>{{ lead.name }}</td>
-            <td>{{ lead.phone }}</td>
+          <tr v-for="d in data" :key="d.id">
+            <td>{{ d.id }}</td>
+            <td>{{ d.name }}</td>
+            <td>{{ d.phone }}</td>
             <td>
               <router-link
-                :to="`/home/sales/leads/${lead.id}`"
+                :to="`/home/sales/leads/${d.id}`"
                 class="btn btn-sm btn-primary"
               >
                 <i class="bi bi-pencil-square" style="cursor: pointer"></i>
@@ -32,22 +32,13 @@
 </template>
 
 <script>
+import ApiMixin from "@/mixins/ApiMixin";
+
 export default {
   name: "LeadsComponent",
-  data: () => ({
-    leads: null,
-  }),
-  methods: {
-    getApiData() {
-      fetch("http://localhost:3000/leads")
-        .then((response) => response.json())
-        .then((response) => {
-          this.leads = response;
-        });
-    },
-  },
+  mixins: [ApiMixin],
   created() {
-    this.getApiData();
+    this.getApiData("http://localhost:3000/leads");
   },
 };
 </script>

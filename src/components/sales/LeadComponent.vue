@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h5>{{ lead?.id}} - {{ lead?.name }}</h5>
+    <h5>{{ data.id }} - {{ data.name }}</h5>
     <div class="row mb-3">
       <label class="col-sm-2 col-form-label">ID</label>
       <div class="col-sm-10">
@@ -8,7 +8,7 @@
           type="text"
           readonly
           class="form-control-plaintext"
-          :value="lead?.id"
+          :value="data.id"
         />
       </div>
     </div>
@@ -16,14 +16,14 @@
     <div class="row mb-3">
       <label class="col-sm-2 col-form-label">Name</label>
       <div class="col-sm-10">
-        <input type="text" class="form-control" :value="lead?.name" />
+        <input type="text" class="form-control" :value="data.name" />
       </div>
     </div>
 
     <div class="row mb-3">
       <label class="col-sm-2 col-form-label">Phone</label>
       <div class="col-sm-10">
-        <input type="text" readonly class="form-control" :value="lead?.phone" />
+        <input type="text" readonly class="form-control" :value="data.phone" />
       </div>
     </div>
 
@@ -34,23 +34,13 @@
 </template>
 
 <script>
+import ApiMixin from "@/mixins/ApiMixin";
+
 export default {
   name: "LeadComponent",
-  data: () => ({
-    lead: null,
-  }),
-  methods: {
-    getApiData() {
-      fetch(`http://localhost:3000/leads/${this.$route.params.id}`)
-        .then((response) => response.json())
-        .then((response) => {
-          this.lead = response;
-          console.log(this.lead)
-        });
-    },
-  },
+  mixins: [ApiMixin],
   created() {
-    this.getApiData();
+    this.getApiData(`http://localhost:3000/leads/${this.$route.params.id}`);
   },
 };
 </script>
