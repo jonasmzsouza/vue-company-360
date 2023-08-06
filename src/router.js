@@ -9,6 +9,7 @@ import LeadsComponent from "@/components/sales/LeadsComponent.vue";
 import LeadComponent from "@/components/sales/LeadComponent.vue";
 import ContractsComponents from "@/components/sales/ContractsComponents.vue";
 import ProductsComponent from "@/components/products/ProductsComponent.vue";
+import ProductComponent from "@/components/products/ProductComponent .vue";
 
 const routes = [
   {
@@ -52,6 +53,13 @@ const routes = [
         path: "products",
         component: ProductsComponent,
         name: "products",
+        children: [
+          {
+            path: ":id",
+            component: ProductComponent,
+            name: "product",
+          },
+        ],
       },
     ],
   },

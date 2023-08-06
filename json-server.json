@@ -4,5 +4,10 @@
     { "id": 2, "name": "Mary White", "phone": "11 97777-6666" },
     { "id": 3, "name": "Bob Green", "phone": "11 95555-5555" },
     { "id": 4, "name": "Lia Pink", "phone": "11 98888-4444" }
+  ],
+  "products": [
+    { "id": 1, "name": "Life Insurance", "image": "life_insurance.png", "description": "Life insurance details" },
+    { "id": 2, "name": "Home Insurance", "image": "home_insurance.png", "description": "Home insurance details" },
+    { "id": 3, "name": "Auto Insurance", "image": "auto_insurance.png", "description": "Auto insurance details" }
   ]
 }
