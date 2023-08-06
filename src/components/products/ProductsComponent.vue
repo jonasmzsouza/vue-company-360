@@ -18,6 +18,8 @@
     </div>
 
     <router-view class="mt-3"></router-view>
+    <router-view name="options"></router-view>
+    <router-view name="indicators"></router-view>
   </div>
 </template>
 

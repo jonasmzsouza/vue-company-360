@@ -66,6 +66,10 @@
         </div>
       </div>
     </div>
+
+    <div class="footer">
+      <router-view name="footer"></router-view>
+    </div>
   </div>
 </template>
 
@@ -95,4 +99,12 @@ export default {
   background-color: #0d6efd;
   border-color: #0d6efd;
 } */
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #ccc;
+}
 </style>
