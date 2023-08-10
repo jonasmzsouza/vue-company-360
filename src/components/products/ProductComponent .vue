@@ -12,9 +12,10 @@ import ApiMixin from "@/mixins/ApiMixin";
 
 export default {
   name: "ProductComponent",
+  props: ['id'],
   mixins: [ApiMixin],
   created() {
-    this.getApiData(`http://localhost:3000/products/${this.$route.params.id}`);
+    this.getApiData(`http://localhost:3000/products/${this.id}`);
   },
   beforeRouteUpdate(to, from, next) {
     if (to.params.id != undefined)

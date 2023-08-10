@@ -45,9 +45,10 @@ import ApiMixin from "@/mixins/ApiMixin";
 
 export default {
   name: "LeadComponent",
+  props: ['id'],
   mixins: [ApiMixin],
   created() {
-    this.getApiData(`http://localhost:3000/leads/${this.$route.params.id}`);
+    this.getApiData(`http://localhost:3000/leads/${this.id}`);
   },
 };
 </script>

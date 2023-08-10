@@ -48,6 +48,19 @@ const routes = [
           },
           {
             path: "leads/:id",
+            props: true,
+            /*
+            props: {
+              id: 1000,
+            },
+            */
+           /*
+            props: (route) => {
+              return {
+                id: route.params.id,
+              };
+            },
+            */
             alias: ["/l/:id", "/le/:id"],
             component: LeadComponent,
             name: "lead",
@@ -66,6 +79,11 @@ const routes = [
         children: [
           {
             path: ":id",
+            props: {
+              default: true,
+              options: true,
+              indicators: true,
+            },
             alias: "/p/:id",
             components: {
               default: ProductComponent,
