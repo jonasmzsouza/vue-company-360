@@ -45,10 +45,15 @@ import ApiMixin from "@/mixins/ApiMixin";
 
 export default {
   name: "LeadComponent",
-  props: ['id'],
+  props: ["id"],
   mixins: [ApiMixin],
   created() {
     this.getApiData(`http://localhost:3000/leads/${this.id}`);
+  },
+  //to, from, next
+  beforeRouteLeave() {
+    const confirm = window.confirm("Do you want to exit this form?");
+    return confirm;
   },
 };
 </script>

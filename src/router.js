@@ -19,10 +19,12 @@ const routes = [
   {
     path: "/",
     component: SitePage,
+    meta: { requiresAuthorization: false },
   },
   {
     path: "/home",
     alias: "/app",
+    meta: { requiresAuthorization: true },
     component: HomePage,
     children: [
       {
@@ -45,6 +47,11 @@ const routes = [
             path: "leads",
             component: LeadsComponent,
             name: "leads",
+            //to, fromm, next
+            beforeEnter() {
+              //we can check if the user has permission to load the route
+              console.log("Route guard - beforeEnter");
+            },
           },
           {
             path: "leads/:id",
@@ -54,7 +61,7 @@ const routes = [
               id: 1000,
             },
             */
-           /*
+            /*
             props: (route) => {
               return {
                 id: route.params.id,
@@ -137,6 +144,26 @@ const routes = [
 const router = createRouter({
   history: createWebHistory(),
   routes,
+});
+
+// to, from, next
+router.beforeEach(() => {
+  // if (to.meta.requiresAuthorization) {
+  //   console.log("Validate access");
+  // } else {
+  //   console.log("Just follow the navigation");
+  // }
+  console.log("Global guard - beforeEach");
+});
+
+// to, from
+router.afterEach(() => {
+  //executed after completion of navigation
+  console.log("Global guard - afterEach");
+});
+
+router.beforeResolve(() => {
+  console.log("Global guard - beforeResolve");
 });
 
 export default router;

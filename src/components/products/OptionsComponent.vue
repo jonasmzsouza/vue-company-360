@@ -12,6 +12,10 @@ export default {
   created() {
     //console.log("Options", this.id);
   },
+  //to, from
+  beforeRouteUpdate() {
+    console.log("Component guard - beforeRouteUpdate");
+  },
 };
 </script>
 

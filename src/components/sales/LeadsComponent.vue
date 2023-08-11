@@ -40,6 +40,13 @@ export default {
   created() {
     this.getApiData("http://localhost:3000/leads");
   },
+  //to, from, next
+  beforeRouteEnter() {
+    console.log("Component guard - beforeRouteEnter");
+  },
+  beforeRouteLeave() {
+    console.log("Component guard - beforeRouteLeave");
+  },
 };
 </script>
 
