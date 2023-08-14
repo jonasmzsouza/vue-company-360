@@ -6,15 +6,60 @@
     { "id": 4, "name": "Lia Pink", "phone": "11 98888-4444" }
   ],
   "products": [
-    { "id": 1, "name": "Life Insurance", "image": "life_insurance.png", "description": "Life insurance details" },
-    { "id": 2, "name": "Home Insurance", "image": "home_insurance.png", "description": "Home insurance details" },
-    { "id": 3, "name": "Auto Insurance", "image": "auto_insurance.png", "description": "Auto insurance details" }
+    {
+      "id": 1,
+      "name": "Life Insurance",
+      "image": "life_insurance.png",
+      "description": "Life insurance details"
+    },
+    {
+      "id": 2,
+      "name": "Home Insurance",
+      "image": "home_insurance.png",
+      "description": "Home insurance details"
+    },
+    {
+      "id": 3,
+      "name": "Auto Insurance",
+      "image": "auto_insurance.png",
+      "description": "Auto insurance details"
+    }
   ],
   "contracts": [
-		{ "id": 1, "leadId": 1, "productId": 1, "start_date": "2023-01-01 00:00:00 ", "end_date": "2023-12-31 23:59:59"},
-		{ "id": 2, "leadId": 1, "productId": 2, "start_date": "2022-01-01 00:00:00 ", "end_date": "2022-12-31 23:59:59"},
-		{ "id": 3, "leadId": 2, "productId": 2, "start_date": "2021-01-01 00:00:00 ", "end_date": "2021-12-31 23:59:59"},
-		{ "id": 4, "leadId": 2, "productId": 3, "start_date": "2023-01-01 00:00:00 ", "end_date": "2023-12-31 23:59:59"},
-		{ "id": 5, "leadId": 3, "productId": 3, "start_date": "2022-01-01 00:00:00 ", "end_date": "2022-12-31 23:59:59"}
-	]
+    {
+      "id": 1,
+      "leadId": 1,
+      "productId": 1,
+      "start_date": "2023-01-01 00:00:00 ",
+      "end_date": "2023-12-31 23:59:59"
+    },
+    {
+      "id": 2,
+      "leadId": 1,
+      "productId": 2,
+      "start_date": "2022-01-01 00:00:00 ",
+      "end_date": "2022-12-31 23:59:59"
+    },
+    {
+      "id": 3,
+      "leadId": 2,
+      "productId": 2,
+      "start_date": "2021-01-01 00:00:00 ",
+      "end_date": "2021-12-31 23:59:59"
+    },
+    {
+      "id": 4,
+      "leadId": 2,
+      "productId": 3,
+      "start_date": "2023-01-01 00:00:00 ",
+      "end_date": "2023-12-31 23:59:59"
+    },
+    {
+      "id": 5,
+      "leadId": 3,
+      "productId": 3,
+      "start_date": "2022-01-01 00:00:00 ",
+      "end_date": "2022-12-31 23:59:59"
+    }
+  ]
 }
