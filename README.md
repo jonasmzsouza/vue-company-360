@@ -8,14 +8,6 @@
 
 <hr>
 
-<p align="center"> 
-  <a href="https://jonasmzsouza.github.io/vue-company-360" target="_blank">
-    <img src="https://img.shields.io/static/v1?label=:&message=website&color=41B883&style=for-the-badge&logo=github&logo-color=white"/>
-  </a>
-  <img  src="https://raw.githubusercontent.com/jonasmzsouza/jonasmzsouza.github.io/main/assets/images/vue-company-360.jpg"  width="100%"  alt="screenshot vue company 360">
-</p>
-<hr>
-
 <p align="center">
   <a href="#-about-the-project">About</a> |
   <a href="#-technologies">Technologies</a> | 
