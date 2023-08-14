@@ -1,19 +1,20 @@
 import { createRouter, createWebHistory } from "vue-router";
-import HomePage from "@/views/HomePage.vue";
-import LoginPage from "@/views/LoginPage.vue";
-import SitePage from "@/views/SitePage.vue";
-import PageNotFound from "@/views/PageNotFound.vue";
-import DashboardComponent from "@/components/dashboard/DashboardComponent.vue";
-import DashboardFooterComponent from "@/components/dashboard/DashboardFooterComponent.vue";
-import SalesComponent from "@/components/sales/SalesComponent.vue";
-import SalesDefault from "@/components/sales/SalesDefault.vue";
-import LeadsComponent from "@/components/sales/LeadsComponent.vue";
-import LeadComponent from "@/components/sales/LeadComponent.vue";
-import ContractsComponents from "@/components/sales/ContractsComponents.vue";
-import ProductsComponent from "@/components/products/ProductsComponent.vue";
-import ProductComponent from "@/components/products/ProductComponent .vue";
-import OptionsComponent from "@/components/products/OptionsComponent.vue";
-import IndicatorsComponent from "@/components/products/IndicatorsComponent.vue";
+
+const HomePage = () => import("@/views/HomePage.vue");
+const LoginPage = () => import("@/views/LoginPage.vue");
+const SitePage = () => import("@/views/SitePage.vue");
+const PageNotFound = () => import("@/views/PageNotFound.vue");
+const DashboardComponent = () => import(/* webpackChunkName: "dashboard" */ "@/components/dashboard/DashboardComponent.vue");
+const DashboardFooterComponent = () => import(/* webpackChunkName: "dashboard" */ "@/components/dashboard/DashboardFooterComponent.vue");
+const SalesComponent = () => import(/* webpackChunkName: "sales" */ "@/components/sales/SalesComponent.vue");
+const SalesDefault = () => import(/* webpackChunkName: "sales" */ "@/components/sales/SalesDefault.vue");
+const LeadsComponent = () => import(/* webpackChunkName: "sales" */ "@/components/sales/LeadsComponent.vue");
+const LeadComponent = () => import(/* webpackChunkName: "sales" */ "@/components/sales/LeadComponent.vue");
+const ContractsComponents = () => import(/* webpackChunkName: "sales" */ "@/components/sales/ContractsComponents.vue");
+const ProductsComponent = () => import(/* webpackChunkName: "products" */ "@/components/products/ProductsComponent.vue");
+const ProductComponent = () => import(/* webpackChunkName: "products" */ "@/components/products/ProductComponent .vue");
+const OptionsComponent = () => import(/* webpackChunkName: "products" */ "@/components/products/OptionsComponent.vue");
+const IndicatorsComponent = () => import(/* webpackChunkName: "products" */ "@/components/products/IndicatorsComponent.vue");
 
 const routes = [
   {
@@ -148,7 +149,7 @@ const router = createRouter({
     if (savedPosition) {
       return savedPosition;
     }
-    
+
     if (to.hash) {
       return { el: to.hash };
     }
